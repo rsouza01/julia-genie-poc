@@ -7,17 +7,13 @@ julia -e 'using Pkg;
     using PackageCompiler;
     Pkg.activate("mana";shared=true);
     println(">>> DEVELOP <<<");
-    Pkg.develop(path="/workspaces/julia-genie-poc/JuliaGeniePoc");
-    Pkg.develop(path="/home/genie/app/GenieMaRuntime")exit
-
+    Pkg.develop(path="./JuliaGeniePoc");
     println(">>> INSTANTIATE <<<");
     Pkg.instantiate();
     println(">>> UPDATE <<<");
     Pkg.update();
     println(">>> PRECOMPILE <<<");
-    Pkg.precompile();'
+    Pkg.precompile();
+    create_app("./JuliaGeniePoc", "./JuliaGeniePocCompiled", force=true)'
 
-
-# create_app("./GenieMaRuntime", "./GenieMaRuntimeCompiled", force=true)
-
-./JuliaGeniePoc/bin/server
+# ./JuliaGeniePoc/bin/_server mana
