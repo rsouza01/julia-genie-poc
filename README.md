@@ -13,4 +13,11 @@ $ sudo mv julia-1.10.4 /usr/local/
 $ sudo ln -s /usr/local/julia-1.10.4/bin/julia /usr/local/bin/julia
 $ export PATH=$PATH:/usr/local/julia-1.10.4/bin
 
+In REPL
+pkg> activate --shared mysharedenv
+pkg> add Genie
 
+## References
+
+- https://pkgdocs.julialang.org/v1/environments/
+- https://docs.julialang.org/en/v1/stdlib/Pkg/
