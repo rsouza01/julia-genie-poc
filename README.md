@@ -6,7 +6,7 @@
 
 ~~~sh
 $ mkdir "/workspaces/local_depot"
-$ export JULIA_DEPOT_PATH="/workspaces/local_depot" or 
+$ export JULIA_DEPOT_PATH="/workspaces/local_depot"
 
 $ wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
 $ tar zxvf julia-1.10.4-linux-x86_64.tar.gz
