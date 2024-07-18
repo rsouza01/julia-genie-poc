@@ -25,3 +25,5 @@ Manifest.toml
 
 local_depot/
 *-Compiled/
+
+/tmp/*
