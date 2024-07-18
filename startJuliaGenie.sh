@@ -1,15 +1,17 @@
 #!/bin/sh
 
 VENV="mana"
+PROJECT="JuliaGeniePoc"
+COMPILED_PROJECT=${PROJECT}-Compiled
 
-export JULIA_DEPOT_PATH="/workspaces/julia-genie-poc/local_depot"
+JULIA_DEPOT_PATH="/workspaces/julia-genie-poc/local_depot"
 
 julia -e "using Pkg;
     Pkg.add(\"PackageCompiler\");
     using PackageCompiler;
     Pkg.activate(\"${VENV}\";shared=true);
     println(\">>> DEVELOP <<<\");
-    Pkg.develop(path=\"./JuliaGeniePoc\");
+    Pkg.develop(path=\"./${PROJECT}\");
     println(\">>> INSTANTIATE <<<\");
     Pkg.instantiate();
     println(\">>> UPDATE <<<\");
@@ -17,6 +19,8 @@ julia -e "using Pkg;
     println(\">>> PRECOMPILE <<<\");
     Pkg.precompile();"
 
-    # create_app('./JuliaGeniePoc', './JuliaGeniePocCompiled', force=true)"
+    # create_app(\"./${PROJECT}\", \"./${COMPILED_PROJECT}\", force=true)"
 
-# ./JuliaGeniePoc/bin/_server mana
+./${PROJECT}/bin/_server mana
+
+# ./${COMPILED_PROJECT}/bin/${PROJECT}
