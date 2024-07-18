@@ -1,0 +1,459 @@
+@rsouza01 ➜ /workspaces/julia-genie-poc (main) $ ./startJuliaGenie.sh
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.10/Project.toml`
+  No Changes to `~/.julia/environments/v1.10/Manifest.toml`
+  Activating project at `~/.julia/environments/mana`
+>>> DEVELOP <<<
+   Resolving package versions...
+  No Changes to `~/.julia/environments/mana/Project.toml`
+  No Changes to `~/.julia/environments/mana/Manifest.toml`
+>>> INSTANTIATE <<<
+>>> UPDATE <<<
+    Updating registry at `~/.julia/registries/General.toml`
+  No Changes to `~/.julia/environments/mana/Project.toml`
+  No Changes to `~/.julia/environments/mana/Manifest.toml`
+>>> PRECOMPILE <<<
+┌ Warning: The project dependencies or compat requirements have changed since the manifest was last resolved.
+│ It is recommended to `Pkg.resolve()` or consider `Pkg.update()` if necessary.
+└ @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:1807
+PackageCompiler: bundled libraries:
+  ├── Base:
+  │    ├── libLLVM-15jl.so - 90.304 MiB
+  │    ├── libatomic.so.1.2.0 - 160.023 KiB
+  │    ├── libdSFMT.so - 21.602 KiB
+  │    ├── libgcc_s.so.1 - 714.164 KiB
+  │    ├── libgfortran.so.5.0.0 - 9.078 MiB
+  │    ├── libgmp.so.10.4.1 - 697.672 KiB
+  │    ├── libgmpxx.so.4.6.1 - 35.367 KiB
+  │    ├── libgomp.so.1.0.0 - 1.410 MiB
+  │    ├── libjulia-codegen.so.1.10.4 - 64.170 MiB
+  │    ├── libjulia-internal.so.1.10.4 - 12.229 MiB
+  │    ├── libmpfr.so.6.2.0 - 2.402 MiB
+  │    ├── libopenlibm.so.4.0 - 221.550 KiB
+  │    ├── libpcre2-8.so.0.11.2 - 652.771 KiB
+  │    ├── libquadmath.so.0.0.0 - 980.492 KiB
+  │    ├── libssp.so.0.0.0 - 35.531 KiB
+  │    ├── libstdc++.so.6.0.32 - 20.010 MiB
+  │    ├── libunwind.so.8.0.1 - 504.031 KiB
+  │    ├── libuv.so.2.0.0 - 600.819 KiB
+  │    ├── libz.so.1.2.13 - 116.028 KiB
+  │    ├── libjulia.so.1.10.4 - 258.875 KiB
+  ├── Stdlibs:
+  │   ├── LibGit2_jll
+  │   │   ├── libgit2.so.1.6.4 - 1.630 MiB
+  │   ├── LibSSH2_jll
+  │   │   ├── libssh2.so.1.0.1 - 311.484 KiB
+  │   ├── LibCURL_jll
+  │   │   ├── libcurl.so.4.8.0 - 738.414 KiB
+  │   ├── MbedTLS_jll
+  │   │   ├── libmbedcrypto.so.2.28.2 - 639.726 KiB
+  │   │   ├── libmbedtls.so.2.28.2 - 287.055 KiB
+  │   │   ├── libmbedx509.so.2.28.2 - 174.625 KiB
+  │   ├── nghttp2_jll
+  │   │   ├── libnghttp2.so.14.24.1 - 727.496 KiB
+  │   ├── OpenBLAS_jll
+  │   │   ├── libopenblas64_.0.3.23.so - 31.779 MiB
+  │   ├── libblastrampoline_jll
+  │   │   ├── libblastrampoline.so.5 - 2.667 MiB
+  Total library file size: 243.372 MiB
+PackageCompiler: bundled artifacts:
+  ├── Libiconv_jll - 3.957 MiB
+  ├── Nettle_jll - 20.037 MiB
+  ├── OpenSSL_jll - 8.940 MiB
+  └── XML2_jll - 5.872 MiB
+  Total artifact file size: 38.806 MiB
+┌ Warning: The project dependencies or compat requirements have changed since the manifest was last resolved.
+│ It is recommended to `Pkg.resolve()` or consider `Pkg.update()` if necessary.
+└ @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:1807
+✔ [01m:47s] PackageCompiler: creating compiler .ji image (incremental=false)
+⠸ [01m:28s] PackageCompiler: compiling fresh sysimage (incremental=false)
+[pid 52743] waiting for IO to finish:
+ Handle type        uv_handle_t->data
+ timer              0x63d44c0->0x7cfe635fc940
+⠙ [07m:08s] PackageCompiler: compiling fresh sysimage (incremental=false)
+┌ Warning: The project dependencies or compat requirements have changed since the manifest was last resolved.
+│ It is recommended to `Pkg.resolve()` or consider `Pkg.update()` if necessary.
+└ @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:1807
+Precompiling project...
+        Info Given JuliaGeniePoc was explicitly requested, output will be shown live 
+ERROR: LoadError: BoundsError: attempt to access 0-element Vector{Tuple{Module, String}} at index [1]
+Stacktrace:
+ [1] getindex(A::Vector{Tuple{Module, String}}, i1::Int64)
+   @ Base ./essentials.jl:13
+ [2] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/packagedef.jl:155
+ [3] include(mod::Module, _path::String)
+   @ Base ./Base.jl:495
+ [4] include(x::String)
+   @ Revise ~/.julia/packages/Revise/W4D4d/src/Revise.jl:25
+ [5] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/Revise.jl:44
+ [6] include
+   @ ./Base.jl:495 [inlined]
+ [7] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+   @ Base ./loading.jl:2222
+ [8] top-level scope
+   @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/packagedef.jl:148
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/Revise.jl:1
+in expression starting at stdin:3
+ERROR: LoadError: Failed to precompile Revise [295af30f-e4ad-537b-8983-00126c2a3abe] to "/home/codespace/.julia/compiled/v1.10/Revise/jl_BcLHW2".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool)
+    @ Base ./loading.jl:2468
+  [3] compilecache
+    @ ./loading.jl:2340 [inlined]
+  [4] (::Base.var"#968#969"{Base.PkgId})()
+    @ Base ./loading.jl:1974
+  [5] mkpidlock(f::Base.var"#968#969"{Base.PkgId}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+  [6] #mkpidlock#6
+    @ /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+  [7] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:111
+  [8] #invokelatest#2
+    @ ./essentials.jl:894 [inlined]
+  [9] invokelatest
+    @ ./essentials.jl:889 [inlined]
+ [10] maybe_cachefile_lock(f::Base.var"#968#969"{Base.PkgId}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:2983
+ [11] maybe_cachefile_lock
+    @ ./loading.jl:2980 [inlined]
+ [12] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1970
+ [13] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1812
+ [14] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [15] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [16] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1803
+ [17] macro expansion
+    @ ./loading.jl:1790 [inlined]
+ [18] macro expansion
+    @ ./lock.jl:267 [inlined]
+ [19] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1753
+ [20] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [21] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [22] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1746
+ [23] include
+    @ ./Base.jl:495 [inlined]
+ [24] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2222
+ [25] top-level scope
+    @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Genie/uliWf/src/Genie.jl:1
+in expression starting at stdin:3
+ERROR: LoadError: Failed to precompile Genie [c43c736e-a2d1-11e8-161f-af95117fbd1e] to "/home/codespace/.julia/compiled/v1.10/Genie/jl_OdceCm".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool)
+    @ Base ./loading.jl:2468
+  [3] compilecache
+    @ ./loading.jl:2340 [inlined]
+  [4] (::Base.var"#968#969"{Base.PkgId})()
+    @ Base ./loading.jl:1974
+  [5] mkpidlock(f::Base.var"#968#969"{Base.PkgId}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+  [6] #mkpidlock#6
+    @ /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+  [7] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:111
+  [8] #invokelatest#2
+    @ ./essentials.jl:894 [inlined]
+  [9] invokelatest
+    @ ./essentials.jl:889 [inlined]
+ [10] maybe_cachefile_lock(f::Base.var"#968#969"{Base.PkgId}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:2983
+ [11] maybe_cachefile_lock
+    @ ./loading.jl:2980 [inlined]
+ [12] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1970
+ [13] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1812
+ [14] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [15] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [16] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1803
+ [17] macro expansion
+    @ ./loading.jl:1790 [inlined]
+ [18] macro expansion
+    @ ./lock.jl:267 [inlined]
+ [19] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1753
+ [20] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [21] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [22] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1746
+ [23] include
+    @ ./Base.jl:495 [inlined]
+ [24] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+    @ Base ./loading.jl:2222
+ [25] top-level scope
+    @ stdin:3
+in expression starting at /workspaces/julia-genie-poc/JuliaGeniePoc/src/JuliaGeniePoc.jl:1
+in expression starting at stdin:3
+  ✗ Revise
+  ✗ Genie
+  ✗ JuliaGeniePoc
+  56 dependencies successfully precompiled in 100 seconds
+
+ERROR: The following 2 direct dependencies failed to precompile:
+
+Genie [c43c736e-a2d1-11e8-161f-af95117fbd1e]
+
+Failed to precompile Genie [c43c736e-a2d1-11e8-161f-af95117fbd1e] to "/home/codespace/.julia/compiled/v1.10/Genie/jl_fgflH1".
+ERROR: LoadError: BoundsError: attempt to access 0-element Vector{Tuple{Module, String}} at index [1]
+Stacktrace:
+ [1] getindex(A::Vector{Tuple{Module, String}}, i1::Int64)
+   @ Base ./essentials.jl:13
+ [2] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/packagedef.jl:155
+ [3] include(mod::Module, _path::String)
+   @ Base ./Base.jl:495
+ [4] include(x::String)
+   @ Revise ~/.julia/packages/Revise/W4D4d/src/Revise.jl:25
+ [5] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/Revise.jl:44
+ [6] include
+   @ ./Base.jl:495 [inlined]
+ [7] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+   @ Base ./loading.jl:2222
+ [8] top-level scope
+   @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/packagedef.jl:148
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/Revise.jl:1
+in expression starting at stdin:3
+ERROR: LoadError: Failed to precompile Revise [295af30f-e4ad-537b-8983-00126c2a3abe] to "/home/codespace/.julia/compiled/v1.10/Revise/jl_c4CqCw".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool)
+    @ Base ./loading.jl:2468
+  [3] compilecache
+    @ ./loading.jl:2340 [inlined]
+  [4] (::Base.var"#968#969"{Base.PkgId})()
+    @ Base ./loading.jl:1974
+  [5] mkpidlock(f::Base.var"#968#969"{Base.PkgId}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+  [6] #mkpidlock#6
+    @ /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+  [7] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:111
+  [8] #invokelatest#2
+    @ ./essentials.jl:894 [inlined]
+  [9] invokelatest
+    @ ./essentials.jl:889 [inlined]
+ [10] maybe_cachefile_lock(f::Base.var"#968#969"{Base.PkgId}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:2983
+ [11] maybe_cachefile_lock
+    @ ./loading.jl:2980 [inlined]
+ [12] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1970
+ [13] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1812
+ [14] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [15] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [16] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1803
+ [17] macro expansion
+    @ ./loading.jl:1790 [inlined]
+ [18] macro expansion
+    @ ./lock.jl:267 [inlined]
+ [19] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1753
+ [20] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [21] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [22] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1746
+ [23] include
+    @ ./Base.jl:495 [inlined]
+ [24] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+    @ Base ./loading.jl:2222
+ [25] top-level scope
+    @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Genie/uliWf/src/Genie.jl:1
+in expression starting at stdin:3
+JuliaGeniePoc [91c110d8-1f06-4e17-b1e2-9201d94e667d]
+
+Failed to precompile JuliaGeniePoc [91c110d8-1f06-4e17-b1e2-9201d94e667d] to "/home/codespace/.julia/compiled/v1.10/JuliaGeniePoc/jl_qPgx6Y".
+ERROR: LoadError: BoundsError: attempt to access 0-element Vector{Tuple{Module, String}} at index [1]
+Stacktrace:
+ [1] getindex(A::Vector{Tuple{Module, String}}, i1::Int64)
+   @ Base ./essentials.jl:13
+ [2] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/packagedef.jl:155
+ [3] include(mod::Module, _path::String)
+   @ Base ./Base.jl:495
+ [4] include(x::String)
+   @ Revise ~/.julia/packages/Revise/W4D4d/src/Revise.jl:25
+ [5] top-level scope
+   @ ~/.julia/packages/Revise/W4D4d/src/Revise.jl:44
+ [6] include
+   @ ./Base.jl:495 [inlined]
+ [7] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+   @ Base ./loading.jl:2222
+ [8] top-level scope
+   @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/packagedef.jl:148
+in expression starting at /home/codespace/.julia/packages/Revise/W4D4d/src/Revise.jl:1
+in expression starting at stdin:3
+ERROR: LoadError: Failed to precompile Revise [295af30f-e4ad-537b-8983-00126c2a3abe] to "/home/codespace/.julia/compiled/v1.10/Revise/jl_BcLHW2".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool)
+    @ Base ./loading.jl:2468
+  [3] compilecache
+    @ ./loading.jl:2340 [inlined]
+  [4] (::Base.var"#968#969"{Base.PkgId})()
+    @ Base ./loading.jl:1974
+  [5] mkpidlock(f::Base.var"#968#969"{Base.PkgId}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+  [6] #mkpidlock#6
+    @ /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+  [7] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:111
+  [8] #invokelatest#2
+    @ ./essentials.jl:894 [inlined]
+  [9] invokelatest
+    @ ./essentials.jl:889 [inlined]
+ [10] maybe_cachefile_lock(f::Base.var"#968#969"{Base.PkgId}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:2983
+ [11] maybe_cachefile_lock
+    @ ./loading.jl:2980 [inlined]
+ [12] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1970
+ [13] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1812
+ [14] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [15] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [16] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1803
+ [17] macro expansion
+    @ ./loading.jl:1790 [inlined]
+ [18] macro expansion
+    @ ./lock.jl:267 [inlined]
+ [19] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1753
+ [20] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [21] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [22] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1746
+ [23] include
+    @ ./Base.jl:495 [inlined]
+ [24] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2222
+ [25] top-level scope
+    @ stdin:3
+in expression starting at /home/codespace/.julia/packages/Genie/uliWf/src/Genie.jl:1
+in expression starting at stdin:3
+ERROR: LoadError: Failed to precompile Genie [c43c736e-a2d1-11e8-161f-af95117fbd1e] to "/home/codespace/.julia/compiled/v1.10/Genie/jl_OdceCm".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool)
+    @ Base ./loading.jl:2468
+  [3] compilecache
+    @ ./loading.jl:2340 [inlined]
+  [4] (::Base.var"#968#969"{Base.PkgId})()
+    @ Base ./loading.jl:1974
+  [5] mkpidlock(f::Base.var"#968#969"{Base.PkgId}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+  [6] #mkpidlock#6
+    @ /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+  [7] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:111
+  [8] #invokelatest#2
+    @ ./essentials.jl:894 [inlined]
+  [9] invokelatest
+    @ ./essentials.jl:889 [inlined]
+ [10] maybe_cachefile_lock(f::Base.var"#968#969"{Base.PkgId}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:2983
+ [11] maybe_cachefile_lock
+    @ ./loading.jl:2980 [inlined]
+ [12] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1970
+ [13] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1812
+ [14] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [15] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [16] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1803
+ [17] macro expansion
+    @ ./loading.jl:1790 [inlined]
+ [18] macro expansion
+    @ ./lock.jl:267 [inlined]
+ [19] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1753
+ [20] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [21] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [22] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1746
+ [23] include
+    @ ./Base.jl:495 [inlined]
+ [24] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+    @ Base ./loading.jl:2222
+ [25] top-level scope
+    @ stdin:3
+in expression starting at /workspaces/julia-genie-poc/JuliaGeniePoc/src/JuliaGeniePoc.jl:1
+in expression starting at stdin:3
+Stacktrace:
+ [1] pkgerror(msg::String)
+   @ Pkg.Types /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/Types.jl:70
+ [2] precompile(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; internal_call::Bool, strict::Bool, warn_loaded::Bool, already_instantiated::Bool, timing::Bool, _from_loading::Bool, kwargs::@Kwargs{io::Base.TTY})
+   @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:1659
+ [3] precompile(pkgs::Vector{Pkg.Types.PackageSpec}; io::Base.TTY, kwargs::@Kwargs{})
+   @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [4] precompile(pkgs::Vector{Pkg.Types.PackageSpec})
+   @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:148
+ [5] precompile(; name::Nothing, uuid::Nothing, version::Nothing, url::Nothing, rev::Nothing, path::Nothing, mode::Pkg.Types.PackageMode, subdir::Nothing, kwargs::@Kwargs{})
+   @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:174
+ [6] precompile()
+   @ Pkg.API /usr/local/julia-1.10.4/share/julia/stdlib/v1.10/Pkg/src/API.jl:165
+ [7] top-level scope
+   @ none:1
+ERROR: failed process: Process(setenv(`/usr/local/julia-1.10.4/bin/julia --color=yes --startup-file=no --pkgimages=no --sysimage=/tmp/jl_01CiJv/sys.so -e 'using Pkg; Pkg.precompile()'`,["PATH=/usr/local/rvm/gems/ruby-3.2.4/bin:/usr/local/rvm/gems/ruby-3.2.4@global/bin:/usr/local/rvm/rubies/ruby-3.2.4/bin:/vscode/bin/linux-x64/f1e16e1e6214d7c44d078b1f0607b2388f29d729/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v20.15.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin", "DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1", "DOTNET_USE_POLLING_FILE_WATCHER=true", "PROMPT_DIRTRIM=4", "GITHUB_CODESPACE_TOKEN=AARK5EIPEX4KIJQ25KYQ27LGTF4F7ANCNFSM4AISE5WA", "GIT_EDITOR=code --wait", "MAVEN_ROOT=/home/codespace/.maven", "SDKMAN_PLATFORM=linuxx64", "NVM_CD_FLAGS=", "NPM_GLOBAL=/home/codespace/.npm-global"  …  "PHP_PATH=/usr/local/php/current", "GEM_HOME=/usr/local/rvm/gems/ruby-3.2.4", "GITHUB_TOKEN=ghu_SCACSFqIwOCqwfim34UuHeZmWan4e80adZOm", "SHELL_LOGGED_IN=true", "JULIA_LOAD_PATH=/workspaces/julia-genie-poc/JuliaGeniePoc:@stdlib", "PIPX_BIN_DIR=/usr/local/py-utils/bin", "SDKMAN_DIR=/usr/local/sdkman", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:", "OPENBLAS_MAIN_FREE=1", "GOROOT=/usr/local/go"]), ProcessExited(1)) [1]
+
+Stacktrace:
+ [1] pipeline_error
+   @ ./process.jl:565 [inlined]
+ [2] run(::Cmd; wait::Bool)
+   @ Base ./process.jl:480
+ [3] run
+   @ ./process.jl:477 [inlined]
+ [4] ensurecompiled(project::String, packages::Vector{String}, sysimage::String)
+   @ PackageCompiler ~/.julia/packages/PackageCompiler/nT5sD/src/PackageCompiler.jl:292
+ [5] create_sysimage(packages::Vector{String}; sysimage_path::String, project::String, precompile_execution_file::Vector{String}, precompile_statements_file::Vector{String}, incremental::Bool, filter_stdlibs::Bool, cpu_target::String, script::Nothing, sysimage_build_args::Cmd, include_transitive_dependencies::Bool, base_sysimage::Nothing, julia_init_c_file::Nothing, julia_init_h_file::Nothing, version::Nothing, soname::Nothing, compat_level::String, extra_precompiles::String)
+   @ PackageCompiler ~/.julia/packages/PackageCompiler/nT5sD/src/PackageCompiler.jl:583
+ [6] create_sysimage
+   @ ~/.julia/packages/PackageCompiler/nT5sD/src/PackageCompiler.jl:521 [inlined]
+ [7] create_app(package_dir::String, app_dir::String; executables::Nothing, precompile_execution_file::Vector{String}, precompile_statements_file::Vector{String}, incremental::Bool, filter_stdlibs::Bool, force::Bool, c_driver_program::String, cpu_target::String, include_lazy_artifacts::Bool, sysimage_build_args::Cmd, include_transitive_dependencies::Bool, include_preferences::Bool, script::Nothing)
+   @ PackageCompiler ~/.julia/packages/PackageCompiler/nT5sD/src/PackageCompiler.jl:881
+ [8] top-level scope
+   @ none:13
+./startJuliaGenie.sh: 25: ./JuliaGeniePoc-Compiled/bin/JuliaGeniePoc: not found

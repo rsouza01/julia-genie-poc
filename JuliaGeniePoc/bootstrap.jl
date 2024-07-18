@@ -3,3 +3,8 @@
 using JuliaGeniePoc
 const UserApp = JuliaGeniePoc
 JuliaGeniePoc.main()
+
+function julia_main()::Cint
+    JuliaGeniePoc.main()
+    return 0
+end
