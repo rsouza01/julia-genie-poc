@@ -34,3 +34,4 @@ pkg> add Genie [list of dependencies...]
 
 - https://genieframework.github.io/Genie.jl/dev/tutorials/4--Developing_Web_Services.html
 - https://www.freecodecamp.org/news/how-to-build-web-apps-in-julia/
+- https://genieframework.github.io/Genie.jl/dev/tutorials/16--Using_Genie_With_Docker.html#Creating-an-optimized-Genie-sysimage-with-PackageCompiler.jl

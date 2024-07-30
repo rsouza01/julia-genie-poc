@@ -4,9 +4,9 @@ clear
 
 set -e
 
-VENV=$1
-PROJECT=$2
-JULIA_DEPOT_PATH=$3
+VENV="mana"
+PROJECT="JuliaGeniePoc"
+JULIA_DEPOT_PATH="/workspaces/local_depot"
 
 GENIE_ENV="dev"
 
@@ -22,14 +22,12 @@ echo "---------------------------------------------------------"
 
 COMPILED_PROJECT=${PROJECT}-Compiled
 
-rm -rf ./${PROJECT}-Compiled
-
 julia -e "using Pkg;
     Pkg.add(\"PackageCompiler\");
     using PackageCompiler;
     Pkg.activate(\"${VENV}\";shared=true);
     println(\">>> DEVELOP <<<\");
-    Pkg.develop(path=\"./${PROJECT}\");
+    Pkg.develop(path=\".\");
     println(\">>> INSTANTIATE <<<\");
     Pkg.instantiate();
     println(\">>> UPDATE <<<\");
@@ -37,10 +35,4 @@ julia -e "using Pkg;
     println(\">>> PRECOMPILE <<<\");
     Pkg.precompile();"
 
-julia --project ./${PROJECT}/make.jl
-
-    # create_app(\"./${PROJECT}\", \"./${COMPILED_PROJECT}\", force=true, filter_stdlibs=true)"
-
-# ./${PROJECT}/bin/_server $VENV
-
-# ./${COMPILED_PROJECT}/bin/${PROJECT}
+julia --project ./compiled/make.jl
